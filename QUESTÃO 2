@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+
+    float saldo = 0;
+    float moeda;
+    int continuar;
+
+    do {
+
+        printf("Digite a moeda (0.50, 1.00 ou 2.00): ");
+        scanf("%f", &moeda);
+
+        saldo = saldo + moeda;
+
+        printf("Deseja adicionar outra moeda? (1-Sim / 0-Nao): ");
+        scanf("%d", &continuar);
+
+    } while (continuar == 1);
+
+    printf("\nTotal acumulado no cofrinho: R$ %.2f\n", saldo);
+
+    return 0;
+}
